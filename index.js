@@ -62,9 +62,9 @@ let findEmployeeByFirstName = function (srcArray, firstName) {
   });
 };
 
-let calculatePayroll = function (records) {
-  return records.reduce(function (total, record) {
-    return total + allWagesFor.call(record);
+let calculatePayroll = function (arrayOfEmployeeRecords) {
+  return arrayOfEmployeeRecords.reduce(function (memo, rec) {
+    return memo + allWagesFor.call(rec);
   }, 0);
 };
 
